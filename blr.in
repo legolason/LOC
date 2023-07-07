@@ -1,0 +1,39 @@
+title standard blr cloud in Ferland et al. 1992                                 
+table agn                                                                       
+ionization parameter -2.0  vary                                                       
+grid from 1.0 to -4 in -0.2 dex steps                                                   
+hden 11                                                                         
+abundances old solar 84
+metals 1.0 linear                                                         
+stop column density 23 ;vary
+#grid from 20 to 25 in 1 dex steps                                                    
+elements limit off -5                                                           
+iterate to convergence                                                          
+#plot continuum                                                                 
+#normalize to "H 1" 6562.81A                                                    
+print line faint -2                                                             
+#Print line collisions                                                           
+#save dominant rates "tt.domg" "Mg"                                             
+#save dominant rates "tt.doh" "H"                                               
+#save overview last ".ovr_Hden11_U1-4_col23_metal2.0"                                                       
+save continuum ".con_Hden11_U1-4_col23_metal2.0" units angstrom last
+save line list last absolute ".line_Hden11_U1-4_col23_metal2.0" no clobber "linelist.dat"                                
+#save element magnesium last ".mag_U2_col25"
+#save element hydrogen last ".hyd_U2_col25"                                              
+#save recombination coefficients last "tt.coe"                                  
+#save species column density "tt.col" "H"                                       
+#save physical conditions last "tt.phy"                                         
+#save line labels long last "tt.line"                                           
+#save line data "tt.lin"                                                        
+#save lines, emissivity, "lines.str"                                            
+#H  1 4861.33A                                                                  
+#H  1 6562.81A                                                                  
+#Mg 2 2795.53A                                                                  
+#end of lines                                                                   
+#save species densities last ".hyd_U2_col25"                                           
+#"H+"                                                                           
+#"H[1]"                                                                         
+#"H[2]"                                                                         
+#"H[3]"
+#"H[4]"
+#end                                                                            
